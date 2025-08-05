@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">BillBuddy</string>
+
+    <!-- Labels -->
+    <string name="title_hint">Bill Title (e.g. Netflix)</string>
+    <string name="amount_hint">Total Amount (₹)</string>
+    <string name="people_hint">People (comma-separated)</string>
+    <string name="notes_hint">Notes (optional)</string>
+    <string name="due_date_label">Pick Due Date (optional)</string>
+    <string name="save_button">Save Bill</string>
+    <string name="select_category">Select Category</string>
+
+    <!-- Categories -->
+    <string-array name="bill_categories">
+        <item>Utilities</item>
+        <item>Entertainment</item>
+        <item>Groceries</item>
+        <item>Rent</item>
+        <item>Miscellaneous</item>
+    </string-array>
+
+    <!-- Toasts & Errors -->
+    <string name="error_fill_fields">Fill all required fields!</string>
+</resources>

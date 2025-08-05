@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <resources>
+      <color name="black">#FF000000</color>
+      <color name="white">#FFFFFFFF</color>
+    <color name="successGreen">#388E3C</color>
+<color name="warningOrange">#FFA000</color>
+<color name="grayDark">#616161</color>
+    <color name="selectedItemBackground">#D0E8FF</color>
+
+
+  </resources>

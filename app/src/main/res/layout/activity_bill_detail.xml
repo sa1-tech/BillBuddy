@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/windowBackground"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="?android:attr/dividerHorizontal"
+        android:dividerPadding="12dp"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <!-- 📝 Title -->
+        <EditText
+            android:id="@+id/editTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext_outline"
+            android:hint="📝 Bill Title"
+            android:inputType="textCapWords"
+            android:padding="16dp"
+            android:textSize="16sp" />
+
+        <!-- 💰 Amount -->
+        <EditText
+            android:id="@+id/editAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext_outline"
+            android:hint="💰 Amount (₹)"
+            android:inputType="numberDecimal"
+            android:padding="16dp"
+            android:textSize="16sp" />
+
+        <!-- 📅 Due Date -->
+        <TextView
+            android:id="@+id/editDueDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext_outline"
+            android:clickable="true"
+            android:focusable="true"
+            android:hint="📅 Pick Due Date"
+            android:padding="16dp"
+            android:textSize="16sp" />
+
+        <!-- 🗒️ Notes -->
+        <EditText
+            android:id="@+id/editNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext_outline"
+            android:gravity="top"
+            android:hint="🗒️ Optional Notes"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:padding="16dp"
+            android:textSize="16sp" />
+
+        <!-- 👥 People (Dynamic) -->
+        <LinearLayout
+            android:id="@+id/peopleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:padding="10dp" />
+
+        <!-- 📎 Attachment Picker -->
+        <Button
+            android:id="@+id/btnPickAttachment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/black"
+            android:text="📎 Update Attachment"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <!-- 🖼️ Attachment Preview -->
+        <LinearLayout
+            android:id="@+id/attachmentPreviewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/attachmentThumbnail"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginEnd="12dp"
+                android:contentDescription="Attachment preview"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pdf" />
+
+            <TextView
+                android:id="@+id/attachmentName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="File Name"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- ✅ Update Button -->
+        <Button
+            android:id="@+id/btnUpdateBill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:text="🔁 Update Bill"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/windowBackground"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="?android:attr/dividerHorizontal"
+        android:dividerPadding="12dp"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <!-- 📝 Title -->
+        <EditText
+            android:id="@+id/inputTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext_outline"
+            android:hint="📝 Bill Title"
+            android:inputType="textCapWords"
+            android:padding="16dp"
+            android:textSize="16sp" />
+
+        <!-- 💰 Amount -->
+        <EditText
+            android:id="@+id/inputAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext_outline"
+            android:hint="💰 Amount (₹)"
+            android:inputType="numberDecimal"
+            android:padding="16dp"
+            android:textSize="16sp" />
+
+        <!-- 👥 People -->
+        <EditText
+            android:id="@+id/inputPeople"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext_outline"
+            android:hint="👥 People (comma separated)"
+            android:inputType="textCapWords"
+            android:padding="16dp"
+            android:textSize="16sp" />
+
+        <!-- 📅 Due Date -->
+        <TextView
+            android:id="@+id/dueDateText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext_outline"
+            android:clickable="true"
+            android:focusable="true"
+            android:hint="📅 Pick Due Date"
+            android:padding="16dp"
+            android:textSize="16sp" />
+
+        <!-- 🏷 Category -->
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="6dp" />
+
+        <!-- 🗒️ Notes -->
+        <EditText
+            android:id="@+id/inputNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_edittext_outline"
+            android:gravity="top"
+            android:hint="🗒️ Optional Notes"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:padding="16dp"
+            android:textSize="16sp" />
+
+        <!-- 📎 Attachment Button -->
+        <Button
+            android:id="@+id/btnPickAttachment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/black"
+            android:text="📎 Attach Image or PDF"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+        <!-- 🖼 Attachment Preview -->
+        <LinearLayout
+            android:id="@+id/attachmentPreviewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/thumbnailView"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="Attachment preview"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pdf" />
+
+            <TextView
+                android:id="@+id/attachmentName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Attachment name"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- 💾 Save Button -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:text="💾 Save Bill"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+</ScrollView>
